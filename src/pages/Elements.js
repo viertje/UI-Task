@@ -1,15 +1,13 @@
-import Card from "../components/Card/Card";
 import * as React from "react";
 
-const Blogs = () => {
+const Elements = () => {
     return (
         <>
             <div>
-                <Card></Card>
             </div>
         </>
     )
   };
   
-  export default Blogs;
+  export default Elements;
   

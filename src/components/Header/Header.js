@@ -4,14 +4,12 @@ export default function Header(){
 
     return (
         <>
-            <div className="w-full bg-blue-950 flex justify-between p-4">
-                <Link to="/">Very cool website</Link>
-                <div className="mx-4">
-                    <input className="rounded-md placeholder" placeholder="search" type="text" />
-                </div>
-                <div className="flex gap-4">
-                    <Link to="/blogs">Blog</Link>
-                    <Link to="/contact">Contact</Link>
+            <div className="mb-8 w-full bg-gradient-to-r from-cyan-800 to-indigo-900 flex justify-between p-4 items-center border-b-2 border-white">
+                <Link className="mx-12" to="/">Very cool website</Link>
+
+                <div className="flex gap-8 mx-12">
+                    <Link to="/elements">Elements</Link>
+                    <Link to="/merchstore">Experiments</Link>
                 </div>
 
             </div>
