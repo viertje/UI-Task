@@ -9,7 +9,7 @@ export default function Header(){
 
                 <div className="flex gap-8 mx-12">
                     <Link to="/elements">Elements</Link>
-                    <Link to="/merchstore">Experiments</Link>
+                    <Link to="/merchstore">Merch</Link>
                 </div>
 
             </div>
