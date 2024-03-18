@@ -2,7 +2,10 @@
 const Home = () => {
     return (
         <>
-             <div className="bg-white h-32 w-32"></div>
+            <div>
+                <h1>Welcome to the Homepage!</h1>
+                <p>This is a placeholder homepage.</p>
+            </div>
         </>
     )
   };

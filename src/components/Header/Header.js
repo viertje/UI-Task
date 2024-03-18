@@ -8,7 +8,7 @@ export default function Header(){
                 <Link className="mx-12" to="/">Very cool website</Link>
 
                 <div className="flex gap-8 mx-12">
-                    <Link to="/elements">Elements</Link>
+                    {/* <Link to="/elements">Elements</Link> */}
                     <Link to="/merchstore">Merch</Link>
                 </div>
 
