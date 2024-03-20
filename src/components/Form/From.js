@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 const Form = ({ array, total }) => {
+    const [gender, setGender] = useState('');
     const [name, setName] = useState('');
     const [firstName, setFirstName] = useState('');
     const [street, setStreet] = useState('');
@@ -15,7 +16,8 @@ const Form = ({ array, total }) => {
         e.preventDefault();
         alert(`Thank you for your order:
         Products: ${array.map((i) => i.name).join(', ')}
-        Total: ${total}    
+        Total: ${total}
+        Gender: ${gender}
         Name: ${name}
         First Name: ${firstName}
         Street: ${street}
@@ -28,6 +30,20 @@ const Form = ({ array, total }) => {
 
     return (
         <form onSubmit={handleSubmit} className='grid grid-cols-2 gap-2 p-4 m-4'>
+                        <div className='flex justify-start mx-2 gap-4 col-span-2'>
+                <div>
+                    <input className='mr-2' type="radio" id="male" value="Male" name="gender" onChange={(e) => setGender(e.target.value)} />
+                    <label htmlFor="male">Male</label>
+                </div>
+                <div>
+                    <input className='mr-2' type="radio" id="female" value="Female" name="gender" onChange={(e) => setGender(e.target.value)} />
+                    <label htmlFor="female">Female</label>
+                </div>
+                <div>
+                    <input  className='mr-2' type="radio" id="others" value="Other" name="gender" onChange={(e) => setGender(e.target.value)} />
+                    <label htmlFor="others">Others</label>
+                </div>
+            </div>
                 <input className='mx-2 rounded-md text-black' type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder='Name'/>
                 <input className='rounded-md mx-2 text-black' type="text" value={firstName} onChange={(e) => setFirstName(e.target.value)} placeholder='Firstname' />
                 <input className='rounded-md mx-2 text-black' type="text" value={street} onChange={(e) => setStreet(e.target.value)} placeholder='Street' />
