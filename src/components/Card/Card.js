@@ -43,7 +43,9 @@ export default function Card({item, addObjectToList}) {
         <Button className="bg-gradient-to-r from-gray-700 to-indigo-900 hover:to-indigo-950 hover:from-gray-950" onClick={() => setOpenModal(false)}>
             Back
           </Button>
-          <Button onClick={handleAddObject} className="bg-gradient-to-r from-gray-700 to-indigo-900 hover:to-indigo-950 hover:from-gray-950">Add to basket</Button>
+          <Button onClick={handleAddObject} className="bg-gradient-to-r from-gray-700 to-indigo-900 hover:to-indigo-950 hover:from-gray-950">
+            <HiShoppingCart className="h-5 w-5 mx-1" />
+            Add to basket</Button>
 
         </Modal.Footer>
       </Modal>
