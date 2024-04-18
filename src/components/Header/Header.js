@@ -8,6 +8,7 @@ export default function Header(){
                 <Link className="mx-32 text-xl" to="/">Fan Artikel Webshop</Link>
 
                 <div className="flex gap-8 mx-32 text-xl">
+                    <Link to="/ListPage">ListPage</Link>
                     <Link to="/SBB">SBB</Link>
                     <Link to="/merchstore">Merch</Link>
                 </div>

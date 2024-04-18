@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import SBB from "./pages/SBB";
 import MerchStore from "./pages/MerchStore";
 import NoPage from "./pages/NoPage";
+import ListPage from "./pages/ListPage";
 import './index.css'
 
 export default function App() {
@@ -14,6 +15,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
+          <Route path="ListPage" element={<ListPage />} />
           <Route path="SBB" element={<SBB />} />
           <Route path="merchstore" element ={<MerchStore />} />
           <Route path="*" element={<NoPage />} />
