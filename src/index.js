@@ -5,6 +5,7 @@ import Layout from "./pages/Layout";
 import Home from "./pages/Home";
 import SBB from "./pages/SBB";
 import MerchStore from "./pages/MerchStore";
+import OrderPage from "./pages/OrderPage";
 import NoPage from "./pages/NoPage";
 import ListPage from "./pages/ListPage";
 import './index.css'
@@ -18,6 +19,7 @@ export default function App() {
           <Route path="ListPage" element={<ListPage />} />
           <Route path="SBB" element={<SBB />} />
           <Route path="merchstore" element ={<MerchStore />} />
+          <Route path="OrderPage" element ={<OrderPage />} />
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>

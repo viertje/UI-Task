@@ -11,6 +11,7 @@ export default function Header(){
                     <Link to="/ListPage">ListPage</Link>
                     <Link to="/SBB">SBB</Link>
                     <Link to="/merchstore">Merch</Link>
+                    <Link to="/OrderPage">Order</Link>
                 </div>
 
             </div>
