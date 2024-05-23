@@ -8,6 +8,7 @@ import MerchStore from "./pages/MerchStore";
 import OrderPage from "./pages/OrderPage";
 import NoPage from "./pages/NoPage";
 import ListPage from "./pages/ListPage";
+import DataFetch from "./pages/DataFetch";
 import './index.css'
 
 export default function App() {
@@ -20,6 +21,7 @@ export default function App() {
           <Route path="SBB" element={<SBB />} />
           <Route path="merchstore" element ={<MerchStore />} />
           <Route path="OrderPage" element ={<OrderPage />} />
+          <Route path="DataFetch" element={<DataFetch />} />
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>

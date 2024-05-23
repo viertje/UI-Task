@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { Button, Modal } from 'flowbite-react';
 import { HiShoppingCart } from 'react-icons/hi';
 
-export default function Card({item, addObjectToList}) {
+export default function Card({item, addObjectToList, image}) {
   const handleAddObject = () => {
     addObjectToList(item);
   };
@@ -13,7 +13,7 @@ export default function Card({item, addObjectToList}) {
   return (
     <>
       <div className="hover:scale-105 bg-gradient-to-r from-blue-900 to-neutral-800 h-72 w-48 m-2 rounded-md grid grid-cols-1 place-content-center transition hover:duration-300 ease-in-out">
-        <img className="place-self-center object-cover rounded-t-md aspect-square h-full w-full" src={item.img} alt="" />
+        <img className="place-self-center object-cover rounded-t-md aspect-square h-full w-full" src={item.img ?? image} alt="" />
         <div className="p-2">
           <div className="">{item.name}</div>
           <div className="flex justify-between">

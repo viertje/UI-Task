@@ -12,6 +12,7 @@ export default function Header(){
                     <Link to="/SBB">SBB</Link>
                     <Link to="/merchstore">Merch</Link>
                     <Link to="/OrderPage">Order</Link>
+                    <Link to="/DataFetch">DataFetch</Link>
                 </div>
 
             </div>
