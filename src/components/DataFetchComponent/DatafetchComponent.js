@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Card from '../Card/Card';
 import axios from 'axios';
 
 const DataFetchingComponent = () => {
@@ -23,26 +24,34 @@ const DataFetchingComponent = () => {
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error}</p>;
+  console.log(data);
+
+  const sortedProducts = data.products.map(item => ({
+    name: item.title,
+    price: item.price,
+    description: item.description,
+    img: item.images[0],
+    band: item.brand,
+  }));
 
   return (
     <div className='w-full flex justify-center'>
-        <div className='flex flex-col gap-4 m-4'>
-      {/* <pre>{JSON.stringify(data, null, 2)}</pre> */}
-      <div>{data.products.title}</div>
-      {data.products.map((i, key) => {
-                return(
-                    
-                    <div key={key} className='flex flex-col gap-4'>
-                        <h1 className='text-xl tex-center'>{i.title}</h1>
-                        <div>{i.price}</div>
-                        <img className='rounded-xl' src={i.images[0]} alt="hi" />
-                        <div className='w-72'>{i.description}</div>
-
-                    </div>)
-            })}
-      </div>
-    </div>
-  );
+      <div className='grid grid-cols-4 gap-4 m-4'>
+        {sortedProducts.map((i, key) => {
+                  return(
+                    <Card item={i}>
+                      {/* <div key={key} className='flex flex-col gap-4'>
+                          <h1 className='text-xl tex-center'>{i.title}</h1>
+                          <div>{i.price}</div>
+                          <img className='rounded-xl' src={i.images[0]} alt="hi" />
+                          <div className='w-72'>{i.description}</div>
+                      </div> */}
+                    </Card>
+                  );
+                })}
+              </div>
+            </div>
+          );
 };
 
 export default DataFetchingComponent;
