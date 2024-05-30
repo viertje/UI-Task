@@ -33,7 +33,7 @@ export default function Component() {
                   <Table.Cell>{i.band}</Table.Cell>
                   <Table.Cell>${i.price}</Table.Cell>
                   <Table.Cell>
-                    <a href="#" className="font-medium text-cyan-200 hover:underline dark:text-cyan-500">
+                    <a href="/" className="font-medium text-cyan-200 hover:underline dark:text-cyan-500">
                       Edit
                     </a>
                   </Table.Cell>

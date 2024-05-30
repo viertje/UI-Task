@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Spinner } from 'flowbite-react';
 import Card from '../Card/Card';
 import axios from 'axios';
 
@@ -22,7 +23,7 @@ const DataFetchingComponent = () => {
     fetchData();
   }, []);
 
-  if (loading) return <p>Loading...</p>;
+  if (loading) return <Spinner className='w-full flex justify-center mt-48' color="failure" aria-label="Spinner" size="xl" />;
   if (error) return <p>Error: {error}</p>;
   console.log(data);
 
@@ -39,14 +40,7 @@ const DataFetchingComponent = () => {
       <div className='grid grid-cols-4 gap-4 m-4'>
         {sortedProducts.map((i, key) => {
                   return(
-                    <Card item={i}>
-                      {/* <div key={key} className='flex flex-col gap-4'>
-                          <h1 className='text-xl tex-center'>{i.title}</h1>
-                          <div>{i.price}</div>
-                          <img className='rounded-xl' src={i.images[0]} alt="hi" />
-                          <div className='w-72'>{i.description}</div>
-                      </div> */}
-                    </Card>
+                    <Card item={i} />
                   );
                 })}
               </div>

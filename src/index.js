@@ -10,6 +10,7 @@ import NoPage from "./pages/NoPage";
 import ListPage from "./pages/ListPage";
 import DataFetch from "./pages/DataFetch";
 import './index.css'
+import LocalFetchPage from "./pages/LocalFetchPage";
 
 export default function App() {
   return (
@@ -22,6 +23,7 @@ export default function App() {
           <Route path="merchstore" element ={<MerchStore />} />
           <Route path="OrderPage" element ={<OrderPage />} />
           <Route path="DataFetch" element={<DataFetch />} />
+          <Route path="LocalFetchPage" element={<LocalFetchPage />} />
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>
